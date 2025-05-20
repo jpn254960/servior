@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="adm.css">
+    <link rel="stylesheet" href="adm.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <section id="alert" class="">
+        <img src="" alt="" id="alerta_logo">
+        <h1 id="barra_alerta"></h1>
+        <h1 id="alerta_l"></h1>
+    </section>
+
+    <section id="painel">
+        <img src="imgs/Tutto (3).png" alt="" id="logo">
+        <h1 id="icon1" class="icon0" onclick="trocar('professora',1)" >adicionais</h1>
+        <h1 id="icon2" class="icon0" onclick="trocar('equipes',2)" >equipe</h1>
+        <h1 id="icon3" class="icon0" onclick="trocar('tarefas',3)" >serviços</h1>
+        <h1 id="icon4" class="icon0" onclick="trocar('galeria',4)" >galeria</h1>
+    </section>
+
+    <section id="tela_inicio">
+
+    </section>
+
+    <section id="professora">
+        <section id="filtragem">
+            <h1 id="icons_filtrage" onclick="gerar(1)">pendentes</h1>
+            <h1 id="icons_filtrage" onclick="gerar(2)">respondidos</h1>
+        </section>
+        <section id="serviços">
+        </section>
+        </section>
+    </section>
+    <div id="overlay" onclick="fecharZoom()">
+        <span class="nav left" onclick="anterior(event)">&#10094;</span>
+        <img id="zoomedImg" src="" alt="Zoom">
+        <span class="nav right" onclick="proximo(event)">&#10095;</span>
+    </div>
+
+    <section id="tarefas">
+        <section id="painel_t">
+            <h1 id="criar" class="controles" onclick="planilha(1)">criar serviços</h1>
+            <h1 id="editar" class="controles" onclick="planilha(2)">alterar obra</h1>
+            <h1 id="mandar" class="controles" onclick="planilha(3)">direcionar obra</h1>
+        </section>
+
+        <section id="lista"> 
+            <!-- ainda em analise se faremos ou não -->
+        </section>
+
+        <section id="painels1" class="painels0"> 
+            <h1 id="sair" onclick="fechar('painels1')">X</h1>
+            <input type="text" placeholder="Nome da escola" id="input_nome">
+            
+            <section id="ptr">
+
+            </section>
+            <input type="text" placeholder="Adicione tarefa" id="input_tarefa">
+            <h1 id="bt_tarefa" onclick="salvar_obra()">Adicionar</h1>
+
+            <input type="file" id="arquivos" multiple hidden onchange="exibir(event)">
+            <img src="imgs/arquivo.gif" alt="asd" id="imagem_file">
+            <label for="arquivos" class="label-aquivo"></label>
+            <label for="arquivo" id="aviso" class="img_text" style="top: 66vh;">Nenhum arquivo</label>
+            <h1 id="bt_enviar1" onclick="criar(3)">enviar</h1>
+        </section>
+
+        <section id="painels2" class="painels0">
+
+        </section>
+
+        <section id="painels3" class="painels0">
+            <h1 id="sair" onclick="fechar('painels3')">X</h1>
+            <section id="equip1e">
+
+            </section>
+            <select name="" id="meninos">
+                <option value="" disabled selected hidden>funcionario</option>
+            </select>
+            <h1 id="bt_montr" onclick="direcionar(1)">Direcionar</h1>
+            <select name="" id="obras">
+                <option value="" disabled selected hidden>Obras</option>
+            </select>
+            <h1 id="bt_enviar_d" onclick="direcionar(2)">Enviar</h1>
+        </section>
+    </section>
+
+    <section id="equipes">
+            <section id="funcionarios">
+                <section class="painel_cima">
+                <h1 class="icons_fu" onclick="trocar_funcionario(1)">Fechados</h1>
+                <h1 class="icons_fu" onclick="trocar_funcionario(2)">Usuarios</h1>
+            </section>
+            <section id="painel_int">
+            </section>
+        </section>
+        <section id="add_funcionario">
+            <h1 id="t1_f">registrar novo</h1>
+            <h1 id="t2_f">funcionario</h1>
+            <p id="sub1_f">um prazer trabalhar com você</p>
+            <input type="text" placeholder="Nome do funcionario" class="registrar_info" id="funcionario_nome">
+            <input type="text" placeholder="defina uma senha" class="registrar_info" id="funcionario_senha">
+        
+            <label class="switch" onchange="cadastrar(0)">
+                <input type="checkbox" id="ceh">
+                <span class="slider"></span>
+              </label>
+              <select name="" id="select_class" onchange="teste()">
+                <option value="Equipe técnica">Equipe técnica</option>
+                <option value="Adm">Adm</option>
+                <option value="Diretora">Diretora</option>
+              </select>
+              <h1 id="barra"></h1>
+              <select name="" id="escola" class="" disabled>
+                <option value="" disabled selected hidden>escola</option>
+            </select>
+              <h1 id="adicionar_fun" onclick="cadastrar(1)">Adicionar</h1>
+        </section>
+    </section>
+</body>
+<script src="adm.js"></script>
+</html>

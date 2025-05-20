@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@keyframes abrir_p{
+    from{
+      bottom: 8vh;
+        height: 0vh;
+    }to{
+        height: 92vh;
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 20%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes abrir{
+    from{ 
+        height: 10vh;
+    } to{
+        height: 70vh;
+    }
+}
+ 
+@keyframes fechar{
+    from{
+        height: 70vh;
+    }to{
+        height: 10vh;
+    }
+}
+#mensagem_erro{
+    font-size: 5vh;
+    line-height: 80vh;
+    text-align: center;
+}
+
+@media(max-width:1024px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: white;
+        color:#222525;
+        margin: 0px;
+        border: 0px;
+        animation: fechar 2s;
+        user-select: none;
+    }
+    #parte_cima{
+        width: 100vw;
+        height: 8vh;
+        text-align: center; 
+        padding-left: 1vw;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 99;
+        top: 0px;
+        border: none;
+        border-bottom: 0.1vh rgba(0, 0, 0, 0.207) solid;
+    }
+    #logo{
+        user-select: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 9vh;
+        width: auto;
+        object-fit: cover;
+    }
+    #painel_tarefa{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-align: center;
+        width: 100vw;
+        height: 92vh;
+        position: absolute;
+        top: 8vh;
+        overflow: scroll;
+        left: 0px;
+    }
+    #oculto{
+        overflow: hidden;
+        width: 100%;
+        height: 115%;
+    }
+    .obra,.emergencia{
+        animation: aparecer 2s;
+        margin-left: 10vw;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+        text-align: left;
+        padding: 1vh;
+        box-sizing: border-box;
+        position: relative;
+        color: #ffffff;
+        width: 80vw;
+        height: 10vh;
+        background-color: #222520;
+        border-radius: 2vh;
+        font-size: 2vh;
+    }
+    .emergencia{
+        background-color: #ff4c4c;
+    }
+    #ligado{
+        height: 70vh;
+    }
+    #img_fundo{
+        height:  40vh;
+        margin: auto;
+        margin-top: 20vh;
+    }
+    .tags{
+        margin: 0px;
+        margin-top: 0.5vh;
+        font-size: 3vh;
+    }
+    #data{
+        font-size: 1.5vh;
+    }
+    #tag_eme{
+        background-color: #222525;
+    }
+    .tag{
+        line-height: 5vh;
+        text-transform: uppercase;
+        border-radius: 2vw;
+        position: absolute;
+        top: -5vh;
+        right: -4vw;
+        width: 35vw;
+        background-color: #177676;
+        height: 5vh;
+        color: white;
+        font-size: 2vh;
+        text-align: center;
+    }
+    .bt_entregar{
+        width: 50vw;
+        height: 8vh;
+        line-height: 8vh;
+        border-radius: 1vh;
+        margin: auto;
+        text-align: center;
+        font-size: 2vh;
+        color: #222520;
+        background-color: white;
+    }
+    #bt_eme{
+        background-color: #222525;
+        color: white;
+    }
+    #obs{
+        font-size: 3vh;
+        margin-left: 1vw;
+    }
+    #tarefas{
+        font-size: 3vh;
+        margin-left: 1vw;
+    }
+
+    .ativo{
+        height: 92vh;
+        top: 8vh;
+        z-index: 2;
+        animation: abrir_p 1s;
+    }
+    .desligado{
+        height: 0px;
+    }
+    .neltro{
+        display: none;
+
+    }
+    #passivo{
+        overflow: scroll;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+    }
+    #bt_fechar{
+        font-size: 4vh;
+        margin-left: 3vw;
+        color:#767676
+    }
+    #data_p{
+        text-align: center;
+        font-size:2vh;
+        color: #222525;
+        margin-bottom: 0px;
+    }
+    #escola_p{
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 5vh;
+        color: #222525;
+        margin-top: 0.4vh;
+        margin-bottom: 0vh;
+    }
+    #texto1{
+        font-size: 3vh;
+        text-align: center;
+        margin-top: 2vh;
+    }
+    #tarefas_p{
+        width: 94vw;
+        margin: auto;
+        height: 60vh;
+        margin-bottom: 30vh;
+        margin-top: 2vh;
+        border: #626361 0.2vw solid;
+        text-align: center;
+        padding: 1vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        
+    }
+    .taf{
+        width: 100%;
+        margin: auto;
+        height: 10vh;
+        border: #767676 0.4vw solid;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .select{
+        height: 100%;
+        border-radius: 0px;
+        width: 35%;
+        font-size: 2vh;
+        color: #222525;
+        border: none;
+        border-right:0.2vw #767676 solid ;
+        text-transform: capitalize;
+    }
+    #tarefa{
+        width: 65%;
+        margin-top: 0px;
+        height: 100%;
+        font-size: 2vh;
+        line-height: 10vh;
+        text-align: left;
+        padding-left: 2vw;
+        box-sizing: border-box;
+    }
+    .op{
+        font-size: 2vh;
+    }
+    #bt_envio{
+        width: 40vw;
+        height: 8vh;
+        line-height: 8vh;
+        font-size: 3vh;
+        color: white;
+        background-color: #177676;
+        position: absolute;
+        left: 30vw;
+        bottom: -15vh;
+        text-align: center;
+        border-radius: 1vh;
+}
+#bt_envio:active{
+    background-color: #115858;
+}
+}
+@media (min-width:500px){
+    #data{
+        font-size: 2vh;
+    }
+    #escola{
+        font-size: 3vh;
+    }
+    .emergencia,.obra{
+        height: 10vh;
+        border-radius: 4vh;
+        padding: 2vh;
+    }
+    #tag{
+        bottom: 3vh;
+    }
+    #ligado{
+        height: 70vh;
+    }
+}

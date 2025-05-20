@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="workid.css">
+    <title>Work id</title>
+</head>
+<body>
+    <section id="inicio">
+        <h1 id="t1">Bem vindo ao <span style="color: rgb(96, 95, 160);">work id</span></h1>
+        <p id="sub1">Seja muito bem vindo diretor(a) aqui você vai poder enviar seus serviços adicionais com muito mais facilidade</p>
+        <h1 id="bt_in" onclick="passar('questionario')">enviar</h1>
+    </section>
+
+    <section id="questionario">
+        <h1 id="contador">0/4</h1>
+        <img id="bt_voltar" onclick="voltar()" src="imgs/icon_voltar.png">
+        <h1 id="tq1"></h1>
+        <h1 id="aviso"></h1>
+        <input type="text" name="" id="input" placeholder="seu nome" class="input" autocomplete="off">
+        <div class="file-upload0" id="file">
+            <img src="" alt="" id="img_previa">
+            <label for="fileInput">Escolher Arquivo</label>
+            <input type="file" id="fileInput" onchange="exibir(event)">
+            <div class="file-name" id="fileName">
+            
+            </div>
+        </div>
+        <h1 id="bt_passar" onclick="passar()">confirmar</h1>
+
+    </section>
+</body>
+<script src="workid.js"></script>
+</html>

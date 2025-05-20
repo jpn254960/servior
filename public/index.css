@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+.desativado{
+    display: none;
+  }
+@keyframes sair_painel{
+    from{
+        top: 3vh;
+    }
+    to{
+        top: -15vh;
+    }
+}
+@keyframes subir_painel{
+    from{
+        top: -15vh;
+    }
+    to{
+    top: 3vh;}
+}
+@media (min-width:1025px){
+    body{
+        border: none;
+        margin: 0px;
+        background-color: white;
+        overflow: hidden;
+    }
+    #painel{
+        width:25vw;
+        margin-left: 25vw;
+        border-top-left-radius: 2vh;
+        border-bottom-left-radius: 2vh;
+        height: 60vh;
+        margin-top: 20vh;
+        background-color: white;
+        color: black;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    }
+    .input{
+        padding: 1vh;
+        box-sizing: border-box;
+        width: 20vw;
+        height: 5vh;
+        margin: auto;
+        margin-top: 20vh;
+        border-radius: 0.5vh;
+        border: none;
+        box-shadow: 0px 0px 0.5vh black;
+        outline-color: rgba(100, 100, 100, 0.678);
+        font-size: 1vw;
+    }
+    #senha{
+        margin-top: 2vh;
+    }
+    #img_lateral{
+        color: rgb(32, 32, 32);
+        border-top-right-radius:2vh;
+        border-bottom-right-radius: 2vh;
+        width: 25vw;
+        height: 60vh;
+        position: absolute;
+        top: 20vh;
+        left: 50vw;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: rgb(2, 2, 77);
+        object-fit: cover;
+    }
+    #bt_entrar{
+        font-size: 1.5vw;
+        cursor: pointer;
+        width: 15vw;
+        height: 5vh;
+        background-color: rgb(2, 2, 77);
+        line-height: 5vh;
+        text-align: center;
+        border-radius: 2vh;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        margin: auto;
+        user-select: none;
+        margin-top: 5vh;
+    }
+    .anuncio_0{
+        display: none;
+    }
+    .anuncio_1{
+        text-transform: uppercase;
+        font-size: 0.9vw;   
+        margin: auto;
+        margin-top: 3vh;
+        width: 20vw;
+        height: 5vh;
+        background-color: rgba(212, 53, 53, 0.493);
+        border: 0.2vh rgb(163, 25, 25) solid;
+        color: brown;
+        text-align: center;
+        line-height: 5vh;
+    }
+    .alertas0{
+        position: absolute;
+        z-index: 99999;
+        width: 30vw;
+        height: 10vh;
+        background-color: white;
+        border-radius: 1vw;
+        top: -15vh;
+        animation: sair_painel 1s;
+
+    }
+    
+    #alert{
+        user-select: none;
+        left: 35vw;
+    }
+    .alertas1{
+        position: absolute;
+        z-index: 99999;
+        width: 30vw;
+        height: 10vh;
+        background-color: white;
+        border-radius: 1vw;
+        top: 4vh;
+
+        animation: subir_painel 1s;
+    }
+    #alerta_logo{
+        height: 7vh;
+        width: auto;
+        position: absolute;
+        top: 1.5vh;
+        left: 1.5vw;
+    }
+    #barra_alerta{
+        position: absolute;
+        top: 1vh;
+        left: 6vw;
+        border-radius: 1vw;
+        width: 0.3vw;
+        height: 8vh;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: #606161;
+    }
+    #alerta_l{
+        position: absolute;
+        top: 0vw;
+        left: 7vw;
+        font-size: 1.3vw;
+        color: #222525b9;
+        text-align: left;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f8;
+    }
+
+    #painel {
+        width: 90vw;
+        max-width: 400px;
+        height: auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 4vh 5vw;
+        text-align: center;
+    }
+
+    #img_lateral {
+        display: none;
+    }
+
+    #nome {
+        margin-top: 2vh;
+        font-size: 2.5vh;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .input {
+        width: 100%;
+        height: 6vh;
+        margin-top: 2vh;
+        padding: 0 1vh;
+        font-size: 2.3vh;
+        border-radius: 0.8vh;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+    }
+
+    #bt_entrar {
+        width: 100%;
+        height: 6.5vh;
+        line-height: 6.5vh;
+        font-size: 3vh;
+        background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+        border-radius: 0.8vh;
+        margin-top: 4vh;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    #bt_entrar:hover {
+        background: linear-gradient(135deg, #5a189a, #7b2cbf);
+    }
+
+    #anuncio {
+        display: none;
+    }
+    .ligado {
+        background-color: rgb(146, 84, 226);
+    }
+
+    .desligado {
+        background-color: rgb(93, 72, 121);
+    }
+
+    .alertas0 {
+        position: absolute;
+        z-index: 99999;
+        width: 80vw;
+        height: 12vh;
+        background-color: white;
+        border-radius: 3vw;
+        top: -15vh;
+        left: 10vw;
+        animation: sair_painel 1s;
+    }
+
+    #alert {
+        user-select: none;
+        left: 10vw;
+    }
+
+    .alertas1 {
+        position: absolute;
+        z-index: 99999;
+        width: 80vw;
+        height: 12vh;
+        background-color: white;
+        border-radius: 3vw;
+        top: 3vh;
+        left: 10vw;
+        animation: subir_painel 1s;
+    }
+
+    #alerta_logo {
+        height: 7vh;
+        width: auto;
+        position: absolute;
+        top: 2vh;
+        left: 3vw;
+    }
+
+    #barra_alerta {
+        position: absolute;
+        top: -1vh;
+        left: 18vw;
+        border-radius: 1vw;
+        width: 1vw;
+        height: 8vh;
+        background-color: #606161;
+    }
+
+    #alerta_l {
+        position: absolute;
+        left: 22vw;
+        font-size: 2.7vw;
+        color: #222525b9;
+        text-align: left;
+        width: 55vw;
+        line-height: 8vh;
+    }
+}
+@media (max-width:499px){
+    #alerta_logo{
+        width: 15vw;
+        height: 15vw;
+        left: 1vw;
+    }
+    #alerta_l{
+        font-size: 4vw;
+        margin-top: 3vh;
+        line-height: 3vh;
+    }
+}

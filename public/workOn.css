@@ -45,6 +45,8 @@
     text-align: center;
 }
 
+
+
 @media(max-width:1024px) {
     body{
         overflow-x: hidden;

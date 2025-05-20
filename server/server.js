@@ -28,6 +28,8 @@ app.use(express.json());  // Necessário para lidar com JSON no corpo da requisi
 const publicKey = 'BMURfov6YsKH8aD9cdyqVG8TJEdlnu7Vgq_9buQnLm-E5D-akX7m713T7UCR7plus2RSOmi1XEtSvzLgX91HE8Y';
 const privateKey = 'S0PFzIBQkefk10tI3rNwXnl_7H1IjB7ZNdp3AnKun8M';
 
+
+
 webpush.setVapidDetails(
   'mailto:joaopepeudro@gmail.com',
   publicKey,
@@ -40,6 +42,18 @@ app.post('/subscribe', (req, res) => {
   console.log('Subscrição salva!');
   res.sendStatus(201);
 });
+
+
+
+app.get('/', (req, res) => {
+  const memory = process.memoryUsage();
+  const cpu = process.cpuUsage();
+  res.json({
+    memoryMB: memory.rss / 1024 / 1024,
+    cpu: cpu
+  });
+});
+
 
 app.post('/send', (req, res) => {
   const {nome,escola} = req.body
